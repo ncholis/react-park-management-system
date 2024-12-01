@@ -1,0 +1,53 @@
+@keyframes slideUp {
+    0% {
+      transform: translateY(100%) scale(0.95);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+  }
+  
+.modal-enter {
+    animation: slideUp 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+/* Animasi keluar modal */
+@keyframes slideDown {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100%) scale(0.95);
+        opacity: 0;
+    }
+}
+  
+.modal-exit {
+    animation: slideDown 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+/* Transisi tambahan untuk efek modal yang lebih halus */
+.modal {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Tambahkan efek bayangan dan border-radius untuk kesan modern */
+.bg-white {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+.heading-form {
+    @apply text-blue-950 text-2xl font-bold mb-4 bg-slate-50;
+}
+
+.label-form {
+    @apply block text-sm font-medium text-blue-950;
+}
+
+.input-form {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg text-black;
+}
